@@ -19,18 +19,17 @@ data = data.drop(['Fare'], axis=1)
 # the deck letter.
 data['Deck'] = data['Cabin'].str.replace('\d+', '').astype('category')
 data = data.drop(['Cabin'], axis=1)
-
-print(data.describe(include='all'))
+ 
 # a)  For continous values, replace the missing values with the average of the 
 #     non-missing values of that column.
-data.fillna(data.mean())
+data['Age'] = data['Age'].fillna(data['Age'].mean())
 
 # b)  For discrete and categorical values, replace the missing values with 
 #     the mode of the column.
 data['Deck'] = data['Deck'].fillna(data['Deck'].value_counts().index[0])
-data['Age'] = data['Age'].fillna(data['Age'].value_counts().index[0])
 
 # Write the data, with the modifications, to a .csv file.
 data.to_csv('cleaned_data.csv')
 # Then, write another file, this time in the json format.
 data.to_json('json_data.json', orient="records")
+print(data.describe(include='all'))
