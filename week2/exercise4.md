@@ -23,6 +23,6 @@ I chose this chart as an example of a chart which is very dependent of it's lege
 
 This chart I chose as an example of violation the ink-data ratio rule. It shows the actual amounts on the maps but also describes in the lower right corner what each size represents. It is also not wise to use area to describe actual amounts since humans tend to underestimate the difference between a smaller and a larger area.
 
-![](glaciers.png)
+![](glasiers.png)
 
 Source: UNESCO, WMO, ICSU, USGS
